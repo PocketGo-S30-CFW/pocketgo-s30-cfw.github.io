@@ -1,4 +1,4 @@
-# Pocketgo s30 Custom Firmware
+# Pocketgo s30 Custom Firmware
 
 This web site contains the documentation of the PocketGo s30 Custom Firmware.
 
