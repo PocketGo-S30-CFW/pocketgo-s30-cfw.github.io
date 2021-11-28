@@ -4,12 +4,11 @@ category: Mainline U-Boot and Kernel
 order: 2
 ---
 
-Obtain the mainline u-boot source code, create a patch file with [this content](#U-Boot-Patch) and call it ``pocketgo-s30.patch``
+Clone the branch `pocketgo-s30` of our [u-boot repo](https://github.com/PocketGo-S30-CFW/u-boot/tree/pocketgo-s30): 
 ```console
-$ git clone git://git.denx.de/u-boot.git
+$ git clone -b pocketgo-s30 https://github.com/PocketGo-S30-CFW/u-boot.git
 $ cd u-boot
-$ patch -p0 < pocketgo-s30.patch
-$ make Sinlinx_SinA33_defconfig
+$ make PocketGo_s30_a33_defconfig
 $ make CROSS_COMPILE=arm-linux-gnueabihf- -j17
 ```
 Note: change the -j17 to your number of cores+1 (e.g. 8 cores -> -j9)
