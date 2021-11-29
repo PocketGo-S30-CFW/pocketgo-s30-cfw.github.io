@@ -23,4 +23,11 @@ Once the build is finished, you will see something like this:
 boot.scr  rootfs.ext2  rootfs.ext4  rootfs.tar  sdcard.img  sun8i-a33-pocketgo-s30.dtb  u-boot.bin  u-boot-sunxi-with-spl.bin  zImage
 ```
 
+The `sdcard.img` contains the full system bootable image ready to be flashed into an SDCard.
 
+Flash the image with:
+```console
+$ sudo dd if=sdcard.img of=/dev/sdX bs=1024 status=progress
+```
+
+Once the card has been flashed, insert it in the PocketGo-S30, and restart. If you have the UART connected you will see the booot traces. 
